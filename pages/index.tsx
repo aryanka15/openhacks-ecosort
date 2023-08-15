@@ -6,9 +6,9 @@ import {AiOutlineLoading3Quarters} from "react-icons/ai"
 import {LayersModel, Tensor, Tensor4D} from "@tensorflow/tfjs";
 export default function Home() {
 
-  const interpret_key = ["Trash", "Compost", "Recycle"]
+  const interpret_key = ['battery', 'biological', 'brown-glass', 'cardboard', 'clothes', 'green-glass', 'metal', 'paper', 'plastic', 'shoes', 'trash', 'white-glass']
   async function loadModel() {
-    let model = await tf.loadLayersModel("https://ecosort.vercel.app/ai_model/model.json");
+    let model = await tf.loadLayersModel("https://ecosort.vercel.app/ai_model_2/model.json");
     return model;
   }
   async function classifyImage(image_tf: Tensor4D) {
